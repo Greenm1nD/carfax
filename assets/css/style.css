@@ -112,6 +112,58 @@ a{
     position: absolute;
     transform: scaleX(2);  
 }
+
+  .vin__code-container{
+    border-radius: 14px;
+    background: white;
+    padding: 40px;
+    max-width: 967px;
+    left: 30%;
+    top: 35%;
+    box-shadow: 0 4px 16px rgb(0 0 0 / 6%);
+    position: absolute;
+  }
+  .vin__code{
+    width: 100%;
+    display: flex;
+  }
+  .search{
+    width: 100%;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .search__input .search__text{
+      padding: 8px 16px;
+      border-color: 0 none!important;
+      background-color: transparent;
+      position: relative;
+  }
+  .search__text{
+      display: flex;
+      transition: all .2s;
+  }
+
+.search__vin {
+    border: solid;
+    border-width: thin;
+    font-family: inherit;
+    width: 558px;
+    border-radius: 8px;
+    cursor: inherit;
+    padding: 8px;
+    border-color: #bdbdbd;
+  }
+  .search__button{
+    height: 42px;
+    padding: 12px;
+    width: 180px;
+    border: none;
+    border-radius: 8px;
+    background-color: #BDEFE9;
+    font-weight: var(--font-medium);
+  }
 .img__box{
     background: linear-gradient(to right, rgba(13 145 132 / 50%), rgb(13 145 132 / 50%));;
 }
@@ -149,12 +201,4 @@ a{
     text-align: right;
     color: var(--text-color-alt);
 }
-
-/* .button--flex {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-} */
-
-
 
