@@ -23,8 +23,7 @@
 /*========== Font weight ==========*/
     --font-medium: 500;
     --font-semi-bold: 600;
-
-     --body-font: 'Poppins', sans-serif;
+    --body-font: 'Poppins', sans-serif;
 }
 
 *{
@@ -98,19 +97,22 @@ a{
     width: 110px;
     display: inline-flex;
 }
-.middle__contant{
+/* .middle__contant{
     background: #fbb12f;
     display: flex;
     align-items: center;
     justify-content: center;
-}
+} */
 .semicircle{
     background-color: white;
-    height: 1075px;
+    height: 100%;
     width: 100%;
-    border-radius: 1000px 1000px 0 0;
+    border-radius: 100%;
     position: absolute;
-    transform: scaleX(2);  
+    transform: scaleX(2);
+    display: grid;
+    z-index: -1;
+    place-items: center;
 }
 .vin__absolute{
     position: absolute;
@@ -170,8 +172,7 @@ a{
     font-weight: var(--font-medium);
   }
   .vin__subtitle{
-    width: 770px;
-    
+    width: 100%;
   }
 .img__box{
     background: linear-gradient(to right, rgba(13 145 132 / 50%), rgb(13 145 132 / 50%));;
@@ -184,7 +185,7 @@ a{
 }
 
 .main-img{
-    width: 800px;
+    width: 50%;
 }
 .main__section{
     display: flex;
@@ -194,8 +195,9 @@ a{
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    padding: 0 24px;
+    padding: 62px 24px;
     margin-top: -430px;
+    z-index: 1;
 }
 .main__data{
     grid-column: 1/3;
@@ -210,4 +212,62 @@ a{
     text-align: right;
     color: var(--text-color-alt);
 }
+.see__more{
+    height: 42px;
+    width: 30%;
+    border: none;
+    border-radius: 8px;
+    background-color: #BDEFE9;
+    font-weight: var(--font-medium);
+    margin-left: 70%;
+    margin-top: 10px
+}
+.three__car{
+    z-index: 1;
+    padding-top: 10%;
+    margin: auto;
+    width: 100%;
+}
+.main__section-2-vin{
+    position: absolute;
+    padding-top: 4%;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    padding-left: 25%;
+    padding-right: 25%;
+}
+.search__text-2{
+    padding: 8px 6px;
+    background-color: transparent;
+    position: relative;
+    width: 78%;
+}
+.vin__code-2{
+    width: 100%;
+    display: flex;
+}
+.search__vin-2{
+    border: #EBF2F5;
+    border-width: thin;
+    font-family: inherit;
+    background-color: #E3ECF0;
+    width: 100%;
+    height: 42px;
+    border-radius: 8px;
+    cursor: inherit;
+    padding: 8px;
+    border-color: #bdbdbd;
+    box-shadow: 2px 2px 5px #aaaaaa;
+}
+.search__button-2{
+    height: 42px;
+    padding: 12px;
+    width: 180px;
+    border: none;
+    border-radius: 8px;
+    background-color: #BDEFE9;
+    font-weight: var(--font-medium);
+    box-shadow: 2px 2px 5px #aaaaaa;
+  }
 
