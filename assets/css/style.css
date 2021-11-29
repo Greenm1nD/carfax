@@ -224,12 +224,12 @@ a{
 }
 .three__car{
     z-index: 1;
+    position: relative;
     padding-top: 10%;
     margin: auto;
     width: 100%;
 }
 .main__section-2-vin{
-    position: absolute;
     padding-top: 4%;
     z-index: 1;
     display: flex;
@@ -246,6 +246,7 @@ a{
 .vin__code-2{
     width: 100%;
     display: flex;
+    z-index: 1;
 }
 .search__vin-2{
     border: #EBF2F5;
@@ -269,5 +270,17 @@ a{
     background-color: #BDEFE9;
     font-weight: var(--font-medium);
     box-shadow: 2px 2px 5px #aaaaaa;
-  }
+}
+.semicircle-2{
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+    position: absolute;
+    transform: scaleX(2);
+    top: 150%;
+}
+.services__img{
+    width: 100%;
+}
 
