@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>MyCarVin</title>
 </head>
+
 <body>
     <header class="header" id="header">
         <nav class="nav container">
             <img src="assets/img/logo.png" class="nav__logo">
             <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list grid">
+                <ul class="nav__list">
                     <li class="nav__item">
                         <a href="#home" class="nav__links active-link">
                             Главный
@@ -54,7 +59,7 @@
         </nav>
     </header>
     <main>
-        <section class="home section" id="home">
+        <section class="home__section" id="home">
             <div class="vin__absolute">
                 <div class="vin__code-container">
                     <div class="vin__code">
@@ -65,37 +70,42 @@
                             <button type="submit" class="search__button">поиск</button>
                         </div>
                     </div>
-                
+
                     <p class="vin__subtitle">
-                        Не экономьте 1.5 доллара, может этот машина прослужит вам всю оставшуюся жизнь.  Carfax всего 1.5 доллара Чтобы приобрести
-                        Carfax, напишите нам по указанному адресу. Или свяжитесь с нами по указанной телеграмме Вы получите полную историю в течение 1 минуты после запроса
+                        Не экономьте 1.5 доллара, может этот машина прослужит вам всю оставшуюся жизнь. Carfax всего 1.5
+                        доллара Чтобы приобрести
+                        Carfax, напишите нам по указанному адресу. Или свяжитесь с нами по указанной телеграмме Вы
+                        получите полную историю в течение 1 минуты после запроса
                     </p>
                 </div>
-            </div>    
-            <div class="home__container container grid">
+            </div>
+            <div class="home__image">
                 <div class="img__box">
-                    <img src="assets/img/car1.jpg" class="mask1 home__img" alt="">
+                    <img src="assets/img/car1.jpg" class="home__img" alt="">
                 </div>
             </div>
         </section>
         <section class="main__section" id="about">
-            <img src="assets/img/car2.png" class="main-img" alt="">
-            <div class="main__data">
-                <h1 class="main__title">Почему MyCarfax?!</h1>
-                <h3 class="main__subtitle">                                                                                         CARFAX является одним из надежных источников информации об истории                                                                 транспортного средства из Америки. CARFAX собирает информацию более
-                    чем 30 лет, помогая миллионам покупателей подержанных автомобилей
-                    принимать более взвешенные решения о покупке и избежать
-                    дорогостоящих проблем со скрытыми повреждениями.
-                
-                    Большинство всех импортированных подержанных
-                    американских автомобилей попадали либо в аварии, были
-                    украдены, затоплены, получали аварийный сертификат,
-                    а затем были восстановлены или
-                    подлежали отзыву для устранения дефектов производства.
-                </h3>
-                <button class="see__more">узнать больше</button>
+            <div class="main__container ">
+                <img src="assets/img/car2.png" class=" main-img" alt="">
+                <div class="main__data">
+                    <h1 class="main__title">Почему MyCarfax?!</h1>
+                    <h3 class="main__subtitle"> CARFAX является одним из надежных источников информации об истории
+                        транспортного средства из Америки. CARFAX собирает информацию более
+                        чем 30 лет, помогая миллионам покупателей подержанных автомобилей
+                        принимать более взвешенные решения о покупке и избежать
+                        дорогостоящих проблем со скрытыми повреждениями.
+
+                        Большинство всех импортированных подержанных
+                        американских автомобилей попадали либо в аварии, были
+                        украдены, затоплены, получали аварийный сертификат,
+                        а затем были восстановлены или
+                        подлежали отзыву для устранения дефектов производства.
+                    </h3>
+                    <button class="see__more">узнать больше</button>
+                </div>
+                <!-- <div class="semicircle"></div> -->
             </div>
-            <div class="semicircle"></div>    
         </section>
         <section class="main__section-2">
             <div>
@@ -111,11 +121,135 @@
                     </div>
                 </div>
             </div>
-            <div class="semicircle-2"></div>    
+            <!-- <div class="semicircle-2"></div> -->
         </section>
-        <section class="services__container">
-            <img src="assets/img/service-bg.png" class="services__img" alt="">
+        <section class="service__section">
+            <div class="service__flex">
+                <div class="services__container" id="services">
+                    <div class="services__images">
+                        <h1 class="services__title">Сервисы</h1>
+                        <div class="services__content">
+                            <div class="service__one">
+                                <img src="assets/img/service1-(1).png" class="sevice__one-img" alt="">
+                                <h1 class="service__title"><strong>Отчет об автомобиле</strong></h1>
+                                <p class="service__subtitle">где показана история, техническое состояние и учет
+                                    транспортного
+                                    средства</p>
+                            </div>
+
+                            <div class="service__two">
+                                <img src="assets/img/service1-(2).png" class="sevice__one-img" alt="">
+                                <h1 class="service__title"><strong>Хронологические записи</strong></h1>
+                                <p class="service__subtitle">Пробег, история повреждений и количество владельцев</p>
+                            </div>
+
+                            <div class="service__three">
+                                <img src="assets/img/service1-(3).png" class="sevice__one-img" alt="">
+                                <h1 class="service__title"><strong>Проверить VIN код</strong></h1>
+                                <p class="service__subtitle">Быстрее всего вы найдете отчет о желаемой машине</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide__bar">
+                    <div class="slider__container">
+                        <h1 class="partner__title">Партнеры</h1>
+                        <div class="slider slider-nav slider__img">
+                            <div><img src="assets/img/partner-1.png"></div>
+                            <div><img src="assets/img/partner-2.png"></div>
+                            <div><img src="assets/img/partner-3.png"></div>
+                            <div><img src="assets/img/partner-4.png"></div>
+                            <div><img src="assets/img/partner-5.png"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img src="assets/img/service-bg.png" class="services__background" alt="">
+        </section>
+        <section id="contact" class="add-padding border-top-color2">
+
+            <div class="footer__container text-center">
+
+                <div class="row">
+
+                    <div class="col-sm-6 col-md-5 text-right scrollimation fade-up d1">
+
+                        <h1 class="big-text">Контакт</h1>
+
+                        <p class="lead">Software Engineer. Lawyer.<br>Experienced Manager. Entrepreneur.</p>
+
+                        <p>Sinatra, Ruby on Rails, JavaScript, Node.js, Express.js, Backbone.js, Handlebars.js, jQuery,
+                            AJAX, HTML5, CSS3,
+                            Responsive/Mobile Development.
+                            <p>For more information, <a href="http://korenlc.com" target="_blank">visit my blog.</a></p>
+                            <div class="footer-distributed-icon">
+                                <ul class="social-links text-center">
+                                    <li><a href="https://twitter.com/korenlc" target="_blank"><i class="fa fa-twitter fa-fw"></i></a></li>
+                                    <li><a href="https://plus.google.com/u/0/+KLCohen/posts/p/pub" target="_blank"><i
+                                                class="fa fa-google-plus fa-fw"></i></a></li>
+                                    <li><a href="https://www.linkedin.com/in/korenlesliecohen" target="_blank"><i
+                                                class="fa fa-linkedin fa-fw"></i></a></li>
+                                </ul>
+                            </div>
+                    </div>
+
+                    <!--=== Contact Form ===-->
+
+                    <form id="contact-form" class="col-sm-6 col-md-offset-1 scrollimation fade-left d3"
+                        action="contact.php" method="post" novalidate>
+
+                        <div class="form-group">
+                            <label class="control-label" for="contact-name">Name</label>
+                            <div class="controls">
+                                <input id="contact-name" name="contactName" placeholder="Your name"
+                                    class="form-control requiredField" data-new-placeholder="Your name" type="text"
+                                    data-error-empty="Please enter your name">
+                                <i class="fa fa-user"></i>
+                            </div>
+                        </div><!-- End name input -->
+
+                        <div class="form-group">
+                            <label class="control-label" for="contact-mail">Email</label>
+                            <div class=" controls">
+                                <input id="contact-mail" name="email" placeholder="Your email"
+                                    class="form-control requiredField" data-new-placeholder="Your email" type="email"
+                                    data-error-empty="Please enter your email"
+                                    data-error-invalid="Invalid email address">
+                                <i class="fa fa-envelope"></i>
+                            </div>
+                        </div><!-- End email input -->
+
+                        <div class="form-group">
+                            <label class="control-label" for="contact-message">Message</label>
+                            <div class="controls">
+                                <textarea id="contact-message" name="comments" placeholder="Your message"
+                                    class="form-control requiredField" data-new-placeholder="Your message" rows="6"
+                                    data-error-empty="Please enter your message"></textarea>
+                                <i class="fa fa-comment"></i>
+                            </div>
+                        </div><!-- End textarea -->
+
+                        <p><button name="submit" type="submit" class="btn btn-color2 btn-block"
+                                data-error-message="Error!" data-sending-message="Sending..."
+                                data-ok-message="Message Sent"><i class="fa fa-paper-plane"></i>Send Message</button>
+                                
+                        </p>
+                        <input type="hidden" name="submitted" id="submitted" value="true" />
+
+                    </form><!-- End contact-form -->
+                   
+                </div>
+            </div>
         </section>
     </main>
+    <footer id="main-footer" class="">
+        <div class="footer-distributed">
+            <p class="footer-text-center">&copy; Copyright © 2021 Bсе права защищены</p>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.js"></script>
+    <script src="assets/js/js.js"></script>
 </body>
+
 </html>
