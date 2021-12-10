@@ -27,6 +27,8 @@
     --fade-color: #40716B;
     ;
     --gradient-color:  linear-gradient(to top, rgb(13 145 132 / 0%), rgb(13 145 132 / 100%));
+    ;
+    --background-color: #3f6963;
     
     /* borders */
     --border-solid: solid #509B9E;
@@ -71,10 +73,9 @@ body.dark-theme{
     --border-solid: solid #fff; 
     --border-with: 2px;
     --body-color-alt-2: none;
+    --background-color: #181a22;
 
-
-
-
+    
     
 }
 
@@ -100,7 +101,7 @@ body {
 .nav__container {
     position: fixed;
     z-index: 1000;
-    background-color: #68686838;
+    background-color: var(--background-color);
     width: 100%;
     backdrop-filter: blur(8px);
     border-bottom: solid #87c6be;
@@ -112,7 +113,7 @@ body {
     float: right;
     margin-right: 20px;
     position: relative;
-    padding: 0 50px;
+    padding: 0;
 }
 
 .nav__item {
@@ -410,17 +411,17 @@ button {
 }
 
 .search__vin-2 {
-    border: #EBF2F5;
-    border-width: thin;
+    border: var(--border-solid);
+    border-width: var(--border-with);
     font-family: inherit;
-    background-color: #E3ECF0;
+    background-color: var(--body-color-alt);
     width: 100%;
     height: 52px;
     border-radius: 8px;
     cursor: inherit;
     padding: 18px;
     border-color: #bdbdbd;
-    box-shadow: 2px 2px 5px #aaaaaa;
+
 }
 
 .search__button-2 {
@@ -433,7 +434,6 @@ button {
     font-size: var(--normal-font-size);
     font-weight: 700;
     color: #474747;
-    box-shadow: 2px 2px 5px #aaaaaa;
     cursor: pointer;
 }
 
@@ -716,7 +716,7 @@ button {
     bottom: 0;
     padding: 0.75rem 0;
     margin: 0 0 0 1.85rem;
-    color: #282936;
+    color: var(--text-color-title);
     font-weight: 700;
     line-height: 1.6;
     text-align: center;
@@ -904,7 +904,7 @@ p {
 
 .a__hover:hover,
 .a__hover:focus {
-    color: #0a410d;
+    color: #fdbb04;
     ;
     text-decoration: none
 }
@@ -1026,12 +1026,11 @@ h6,
     color: rgb(255, 255, 255);
     font-size: 21px;
     font-weight: 300;
-    background: #509b9e;
-    outline: none;
-    border: none;
+    background: var(--body-color-alt-2);
+    border-width: var(--border-with);
+    border: var(--border-solid);
     border-radius: 25px;
     transition: all .3s ease-out;
-    box-shadow: 2px 2px 40px #ffffff96;
 }
 
 .btn-color1 {
@@ -1237,7 +1236,7 @@ h6,
 }
 
 .footer-distributed {
-    background-color: #3f6963;
+    background-color: var(--background-color);
     height: 40px;
     display: flex;
 }
@@ -1250,7 +1249,7 @@ h6,
 .footer-basic {
     padding: 6px 0;
     color: #ffffff;
-    background-color: #3f6963;
+    background-color: var(--background-color);
     right: 20px;
     position: absolute;
     font-weight: 800;
@@ -1298,7 +1297,6 @@ h6,
 }
 
 .lang-select {
-    position: absolute;
     right: 1px;
     float: right;
     border: 1px solid #bdefe9;
@@ -1329,7 +1327,11 @@ h6,
 .lang-select .lang-selected:hover {
     cursor: pointer;
 }
-
+.change-theme{
+    cursor: pointer;
+    font-size: 32px;
+    color: white;
+}
 /* ----language switch end---- */
 
 
@@ -1498,8 +1500,9 @@ h6,
 
     .nav__container {
         backdrop-filter: none;
-        background-color: var(--body-color-alt);
+        background-color: var(--background-color);
     }
+    
 
     .nav__item {
         display: block;
@@ -1527,7 +1530,7 @@ h6,
     }
 
     .service__section-image {
-        background-color: var(--body-color-alt);
+        background-color: var(--body-color-alt-2);
         height: 850px;
         width: 100%;
         background-position: center;
@@ -1641,7 +1644,7 @@ h6,
         padding: 14px 0px;
         margin-bottom: 10px;
         width: 266px;
-        /* margin-top: 66%; */
+        margin-top: 16%; 
         /* position: absolute; */
         z-index: 1;
     }
