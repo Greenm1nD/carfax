@@ -197,6 +197,7 @@ label.logo {
     background-color: transparent;
     position: relative;
     width: 78%;
+    cursor: text;
 }
 
 .search__text {
@@ -227,10 +228,7 @@ label.logo {
     font-weight: 700;
     color: #474747;
     cursor: pointer;
-}
-
-.search__button:hover {
-    box-shadow: 2px 2px 5px #aaaaaa;
+    
 }
 
 button {
@@ -323,6 +321,7 @@ button {
     background-color: transparent;
     position: relative;
     width: 100%;
+    cursor: text;
 }
 
 .vin__code-2 {
@@ -1140,7 +1139,12 @@ h6,
     right: 100%;
     top: 14px;
 }
-
+.detail__container{
+    font-size: var(--normal-font-size);
+    color: var(--text-color-alt);
+    text-align: left;
+    padding: 6% 2%;
+}
 /* ----language switch end---- */
 
 
@@ -1180,6 +1184,7 @@ h6,
 }
 
 @media screen and (max-width: 700px) {
+    
     .vin__code-container {
         max-width: 500px;
     }
@@ -1222,6 +1227,10 @@ h6,
 
 /* 1024 */
 @media screen and (max-width: 1024px) {
+    .detail__container{
+        text-align: left;
+        padding: 30% 2%;
+    }
     .theme__changes{
         position: initial;
         margin-top: 25px;
@@ -1484,7 +1493,9 @@ h6,
 
 }
 
+
 @media screen and (max-width: 740px) {
+    
     .main__title {
         font-size: 35px;
         color: var(--text-color-title);
@@ -1595,7 +1606,7 @@ h6,
     background: transparent;
     border-radius: 0.2em;
     font-size: 1.3em;
-    
+    cursor: pointer;
 }
 
 .notification::before,
@@ -1606,8 +1617,7 @@ h6,
 
 .notification::before {
     display: block;
-    content: "\f0f3";
-    font-family: "FontAwesome";
+    
     transform-origin: top center;
 }
 
@@ -1634,6 +1644,9 @@ h6,
 }
 
 .notification.notify::before {
+    animation: ring 1.5s ease;
+}
+.notification:hover{
     animation: ring 1.5s ease;
 }
 
