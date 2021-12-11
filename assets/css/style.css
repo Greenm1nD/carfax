@@ -64,7 +64,12 @@ body {
     background-color: var(--body-color-alt);
     overflow-x: hidden;
 }
-
+.them__changes{
+    display: inline-block;
+    right: 100%;
+    top: 16px;
+    position: absolute;
+}
 .nav__container {
     position: fixed;
     z-index: 1000;
@@ -1099,7 +1104,7 @@ h6,
     border: 1px solid #bdefe9;
     padding: 6px 8px;
     border-radius: 50px;
-    background-color: white;
+    background-color: transparent;
     height: auto;
     max-height: 600px;
     margin-top: 17px;
@@ -1130,19 +1135,13 @@ h6,
     font-size: 32px;
     color: white;
 }
+.theme__changes{
+    position: absolute;
+    right: 100%;
+    top: 14px;
+}
 
 /* ----language switch end---- */
-
-
-/* mobile menu */
-
-
-
-
-
-
-
-
 
 
 /* 350px */
@@ -1223,6 +1222,20 @@ h6,
 
 /* 1024 */
 @media screen and (max-width: 1024px) {
+    .theme__changes{
+        position: initial;
+        margin-top: 25px;
+        justify-content: center;
+        display: flex;
+    }
+    .change-theme {
+        cursor: pointer;
+        font-size: 32px;
+        color: white;
+        border: none;
+        padding: 1px 8px;
+    }
+
     .services__background {
         display: none;
     }
@@ -1319,7 +1332,11 @@ h6,
     }
 
     .lang-select {
-        display: none;
+        position: absolute;
+        top: 44px;
+        right: 50px;
+        border: none;
+        background-color: transparent;
     }
 
     .nav__links {
@@ -1502,7 +1519,7 @@ h6,
     }
 
     .img__box {
-        background: linear-gradient(to top, rgb(4 42 38), rgb(13 145 132 / 100%));
+        background: var(--gradient-color);
         height: 100%;
         width: 100%;
         background-position: center;
@@ -1539,7 +1556,7 @@ h6,
     .footer-basic {
         padding: 6px 6px;
         color: #ffffff;
-        background-color: #031e1b;
+        background-color: var(--background-color);
         font-weight: 800;
         width: 100%;
         right: 0;
@@ -1564,4 +1581,109 @@ h6,
         font-size: 50px;
     }
 
+}
+
+
+
+/* new add */
+.notification {
+    display: inline-block;
+    position: relative;
+    top: 2px;
+    margin-right: 4px;
+    padding: 0.6em;
+    background: transparent;
+    border-radius: 0.2em;
+    font-size: 1.3em;
+    
+}
+
+.notification::before,
+.notification::after {
+    color: #fff;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.notification::before {
+    display: block;
+    content: "\f0f3";
+    font-family: "FontAwesome";
+    transform-origin: top center;
+}
+
+.notification::after {
+    font-family: Arial;
+    font-size: 0.7em;
+    font-weight: 700;
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    padding: 5px 8px;
+    line-height: 100%;
+    border: 2px #fff solid;
+    border-radius: 60px;
+    background: transparent;
+    opacity: 0;
+    content: attr(data-count);
+    opacity: 0;
+    transform: scale(0.5);
+    transition: transform, opacity;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+}
+
+.notification.notify::before {
+    animation: ring 1.5s ease;
+}
+
+.notification.show-count::after {
+    transform: scale(1);
+    opacity: 1;
+}
+
+@keyframes ring {
+    0% {
+        transform: rotate(35deg);
+    }
+
+    12.5% {
+        transform: rotate(-30deg);
+    }
+
+    25% {
+        transform: rotate(25deg);
+    }
+
+    37.5% {
+        transform: rotate(-20deg);
+    }
+
+    50% {
+        transform: rotate(15deg);
+    }
+
+    62.5% {
+        transform: rotate(-10deg);
+    }
+
+    75% {
+        transform: rotate(5deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@media screen and (max-width: 1024px) {   
+    .notification {
+        display: inline-block;
+        position: absolute;
+        top: 60px;
+        left: 50px;
+        padding: 0.5em;
+        background: transparent;
+        border: none;
+        font-size: 1.3em;
+    }
 }
