@@ -1347,7 +1347,7 @@ h6,
     }
 
     .service__section-image {
-        background-color: var(--body-color-alt-2);
+        background-color: var(--background-color);
         height: 850px;
         width: 100%;
         background-position: center;
