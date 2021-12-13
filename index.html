@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="assets/css/style.css">
     <title>MyCarVin</title>
@@ -21,12 +21,10 @@
         <nav class="nav__container">
             <label class="logo"><img src="assets/img/logo.png" class="nav__logo"></label>
             <ul id="primary-navigation" data-visible="false" class="nav__list primary-navigation">
-                <div class="theme__changes">
+                <li class="theme__changes">
                     <i class="uil uil-moon change-theme" id="theme-button"></i>
-                </div>
-                
-                </div>
-                <div class="lang-select">
+                </li>
+                <li class="lang-select">
                     <img src="https://cdn.countryflags.com/thumbs/russia/flag-round-250.png"
                         class="flag-img lang-selected " />
                     <a href="#">
@@ -36,7 +34,7 @@
                     <a href="#">
                         <img src="https://cdn.countryflags.com/thumbs/georgia/flag-round-250.png" class="flag-img " />
                     </a>
-                </div>
+                </li>
                 <li class="nav__item raise ">
                     <a href="#home" class="nav__links active active-link text__decoration">
                         Главный
@@ -62,18 +60,21 @@
                         Вход
                     </a>
                 </li>
-                <li class="nav__item registration raise">
-                    <a href="#registration" class="nav__links registration active-link">
-                        Регистрация
-                    </a>
+                <li class="dropdown skills__open raise skills__close">
+                    <label class="profile">
+                        <input class="btn__checkbox active-link" type="checkbox" id='arrow' />
+                        <button class="nav__links skills__close registration active-link">
+                            <span>Регистрация</span><i class="uil uil-angle-down skills__arrow"></i></button>
+
+                        <ul>
+                            <li><a href="#">Test 1</a></li>
+                            <li><a href="#">Test 1</a></li>
+                            <li><a href="#">Test 1</a></li>
+                        </ul>
+                    </label>
                 </li>
                 <i class="fa fa-bell notification" aria-hidden="true"></i>
-                <div class="nav__btns">
-
-                </div>
-
-                <!-- <div class="main-menu lang__raise language">
-                </div> -->
+                <li class="nav__btns"></li>
             </ul>
         </nav>
 
@@ -219,13 +220,13 @@
                                     my blog.</a></p>
                             <div class="footer-distributed-icon">
                                 <ul class="social-links text-center ">
-                                    
+
                                     <li><a href="https://www.telegram.com" class="active-link" target="_blank">
-                                        <i class="fab fa-telegram"></i></a></li>
-                                    <li><a href="https://www.facebook.com" class="active-link"
-                                            target="_blank"><i class="fab fa-facebook"></i></i></a></li>
-                                    <li><a href="https://www.instagram.com" class="active-link"
-                                            target="_blank"><i class="fab fa-instagram"></i></i></a></li>
+                                            <i class="fab fa-telegram"></i></a></li>
+                                    <li><a href="https://www.facebook.com" class="active-link" target="_blank"><i
+                                                class="fab fa-facebook"></i></i></a></li>
+                                    <li><a href="https://www.instagram.com" class="active-link" target="_blank"><i
+                                                class="fab fa-instagram"></i></i></a></li>
                                 </ul>
                             </div>
                     </div>
