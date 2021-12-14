@@ -88,7 +88,9 @@ if (selectedTheme) {
 }
 
 // Activate / deactivate the theme manually with the button
+
 themeButton.addEventListener('click', () => {
+    logoSwap();
     // Add or remove the dark / icon theme
     document.body.classList.toggle(darkTheme)
     themeButton.classList.toggle(iconTheme)
@@ -117,4 +119,17 @@ $(window).click(function() {
       console.log('header')
     event.stopPropagation();
   });
+
+  
+  function logoSwap() {
+    let logo = document.getElementById("logo-one");
+    let src = logo.getAttribute("src")
+
+    if (src === "assets/img/logo.png" ){
+        logo.setAttribute("src","assets/img/logo-2.png")
+    } else {
+        logo.setAttribute("src","assets/img/logo.png")
+        
+    }
+  }
 
