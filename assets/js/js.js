@@ -97,3 +97,24 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
 
+// outside click
+
+$(window).click(function() {
+    let visibility = primaryNav.getAttribute('data-visible');
+    console.log(visibility);
+
+    if (visibility === "false") {
+        primaryNav.setAttribute('data-visible', true);
+        navToggle.setAttribute('aria-expanded', false);
+    } else if (visibility === "true") {
+        primaryNav.setAttribute('data-visible', false);
+        navToggle.setAttribute('aria-expanded', true);
+    }
+    console.log("click")
+  });
+  
+  $('#header').click(function(event){
+      console.log('header')
+    event.stopPropagation();
+  });
+

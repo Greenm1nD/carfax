@@ -1149,7 +1149,9 @@ h6,
     padding: 6% 2%;
 }
 /* ----language switch end---- */
-
+.js-is-hidden{
+    display: none;
+}
 /* dropdown */
 .dropdown{
      /* justify-content: space-around; */
@@ -1170,8 +1172,6 @@ h6,
     position: absolute;
     background: white;
     top: 26px;
-    width: 140px;
-    height: 140px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -1186,6 +1186,10 @@ h6,
     box-shadow: inset 0px 8px 8px 0px #5f958e;
     
 }
+.logout__btn{
+    border: none;
+    background: transparent;
+}
 .dropdown button{
     background: none;
     border: 2px solid #fff;
@@ -1198,7 +1202,7 @@ h6,
     text-decoration: none;
 }
 .profile li{
-
+    border-bottom: 1px solid;
     width: 100%;
     height: 100%;
     display: flex;
@@ -1214,6 +1218,7 @@ h6,
     transform: translateY(-0.25em);
     background-color: #26eed7;
     border-color: #26eed7;
+    cursor: pointer;
 }
 
 input:checked + button + ul {
@@ -1229,14 +1234,13 @@ input:checked + button + ul {
 .btn__checkbox{
     z-index: 1000;
     position: absolute;
-    /* width: 191px; */
-    /* top: 20px; */
     opacity: 0;
-    width: 23%;
-    height: 84%;
+    width: 18%;
+    height: 63%;
 }
 ul li{
     list-style-type: none;
+    /* border-bottom: 1px solid; */
 }
 
 
@@ -1253,13 +1257,6 @@ ul li{
     transition: .4s;
 }
 
-.btn__checkbox{
-    z-index: 1000;
-    position: absolute;
-    /* width: 191px; */
-    top: 20px;
-    
-}
 
 
 /* 350px */
@@ -1383,6 +1380,9 @@ ul li{
 
     .services__background {
         display: none;
+    }
+    .logout__btn{
+        border: none iportant;
     }
 
     .nav__logo {

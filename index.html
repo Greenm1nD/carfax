@@ -16,7 +16,7 @@
 
 <body>
     <header class="header" id="header">
-        <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="true"><span
+        <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="true"><span
                 class="sr-only"></span></button>
         <nav class="nav__container">
             <label class="logo"><img src="assets/img/logo.png" class="nav__logo"></label>
@@ -66,11 +66,19 @@
                         <button class="nav__links skills__close registration active-link">
                             <span>Регистрация</span><i class="uil uil-angle-down skills__arrow"></i></button>
 
-                        <ul>
-                            <li><a href="#">Test 1</a></li>
-                            <li><a href="#">Test 1</a></li>
-                            <li><a href="#">Test 1</a></li>
-                        </ul>
+                            <ul>
+                                <li><a href="/user/profile">    Profile</a></li>
+                                <li><a href="/Dashboard">       auth.Dashboard</a></li>
+                                <li><a href="/history_balance"> auth.history_balance</a></li>
+                                <li><a href="/add_balance">     auth.add_balance</a></li>
+                                <li><a href="/myvincodes">      auth.my_vin_code  </a></li>
+                                <li><a href="/messageList">     auth.messages </a></li>
+                                <li>
+                                    <form method="POST" action="{{ route('logout">
+                                        <button class="logout__btn">LogOut</button>
+                                    </form>
+                                </li>
+                            </ul>
                     </label>
                 </li>
                 <i class="fa fa-bell notification" aria-hidden="true"></i>
