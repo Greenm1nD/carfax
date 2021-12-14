@@ -1,13 +1,3 @@
-// $('.slider-for').slick({
-//     slidesToShow: reportWindowSize(),
-//     slidesToScroll: 1,
-//     arrows: false,
-//     fade: true,
-//     asNavFor: '.slider-nav'
-// });
-
-// function reportWindowSize() {
-
 if (window.innerWidth <= 1024) {
     $('.slider-nav').slick({
         slidesToShow: 1,
@@ -26,15 +16,11 @@ if (window.innerWidth <= 1024) {
     });
 }
 
-//   reportWindowSize()
-//   window.addEventListener('resize', reportWindowSize);
-
 $('a[data-slide]').click(function (e) {
     e.preventDefault();
     var slideno = $(this).data('slide');
     $('.slider-nav').slick('slickGoTo', slideno - 1);
 });
-
 
 $(document).click(function () {
     if (jQuery('.lang-select').find('.flag-img').hasClass('lang-show')) {
@@ -45,18 +31,13 @@ jQuery('.lang-selected').click(function (e) {
     e.preventDefault();
     e.stopPropagation();
     jQuery('.lang-select').find('.flag-img').toggleClass('lang-show');
-
 })
 
 const primaryNav = document.querySelector('.primary-navigation');
 const navToggle = document.querySelector('.mobile-nav-toggle');
 
-
-
 navToggle.addEventListener('click', () => {
     let visibility = primaryNav.getAttribute('data-visible');
-    console.log(visibility);
-
     if (visibility === "false") {
         primaryNav.setAttribute('data-visible', true);
         navToggle.setAttribute('aria-expanded', false);
@@ -67,19 +48,15 @@ navToggle.addEventListener('click', () => {
 })
 
 // dark theme
-
 const themeButton = document.getElementById('theme-button')
 const darkTheme = 'dark-theme'
 const iconTheme = 'uil-sun'
-
 // Previously selected topic (if user selected)
 const selectedTheme = localStorage.getItem('selected-theme')
 const selectedIcon = localStorage.getItem('selected-icon')
-
 // We obtain the current theme that the interface has by validating the dark-theme class
 const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
 const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'uil-moon' : 'uil-sun'
-
 // We validate if the user previously chose a topic
 if (selectedTheme) {
     // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
@@ -88,7 +65,6 @@ if (selectedTheme) {
 }
 
 // Activate / deactivate the theme manually with the button
-
 themeButton.addEventListener('click', () => {
     logoSwap();
     // Add or remove the dark / icon theme
@@ -100,36 +76,22 @@ themeButton.addEventListener('click', () => {
 })
 
 // outside click
+$(window).click(function () { 
+    primaryNav.setAttribute('data-visible', false);
+    navToggle.setAttribute('aria-expanded', true);
+    document.getElementById("arrow").checked = false;
+});
 
-$(window).click(function() {
-    let visibility = primaryNav.getAttribute('data-visible');
-    console.log(visibility);
-
-    if (visibility === "false") {
-        primaryNav.setAttribute('data-visible', true);
-        navToggle.setAttribute('aria-expanded', false);
-    } else if (visibility === "true") {
-        primaryNav.setAttribute('data-visible', false);
-        navToggle.setAttribute('aria-expanded', true);
-    }
-    console.log("click")
-  });
-  
-  $('#header').click(function(event){
-      console.log('header')
+$('#header').click(function (event) {
     event.stopPropagation();
-  });
+});
 
-  
-  function logoSwap() {
+function logoSwap() {
     let logo = document.getElementById("logo-one");
     let src = logo.getAttribute("src")
-
-    if (src === "assets/img/logo.png" ){
-        logo.setAttribute("src","assets/img/logo-2.png")
+    if (src === "assets/img/logo.png") {
+        logo.setAttribute("src", "assets/img/logo-2.png")
     } else {
-        logo.setAttribute("src","assets/img/logo.png")
-        
+        logo.setAttribute("src", "assets/img/logo.png")
     }
-  }
-
+}
