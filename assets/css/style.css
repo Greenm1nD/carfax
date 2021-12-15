@@ -412,7 +412,9 @@ button {
     z-index: 0;
     place-items: center;
 }
-
+.service{
+    width: 33.33%;
+   }
 .service__flex {
     position: absolute;
     top: 25%;
